@@ -1,4 +1,32 @@
-# react-snap [![Build Status](https://travis-ci.org/stereobooster/react-snap.svg?branch=master)](https://travis-ci.org/stereobooster/react-snap) [![npm](https://img.shields.io/npm/v/react-snap.svg)](https://www.npmjs.com/package/react-snap) ![npm](https://img.shields.io/npm/dt/react-snap.svg) [![Twitter Follow](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&label=Follow)](https://twitter.com/stereobooster)
+# react-snap
+
+This is a fork of the react-snap packages, with:
+* update packages
+* exclude option
+* sitemap
+
+## Sitemap
+
+If you want to generate a `sitemap.xml` for your static website you can do this in the `package.json`, like this:
+
+```json
+"homepage": "https://mycoolwebsite.com/",
+"reactSnap": {
+  "sitemap": true
+}
+```
+
+Without the `homepage` a sitemap can't be generated.
+
+## exclude 
+
+```json
+"reactSnap": {
+  "exclude": [ /* glob regexp expressoin against pathname ],
+}
+```
+
+---
 
 Pre-renders a web app into static HTML. Uses [Headless Chrome](https://github.com/GoogleChrome/puppeteer) to crawl all available links starting from the root. Heavily inspired by [prep](https://github.com/graphcool/prep) and [react-snapshot](https://github.com/geelen/react-snapshot), but written from scratch. Uses best practices to get the best loading performance.
 
